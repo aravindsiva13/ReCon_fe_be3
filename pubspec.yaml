@@ -1,0 +1,64 @@
+name: reconciliation_app
+description: A Flutter app for transaction reconciliation analysis and visualization
+
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # UI Components
+  cupertino_icons: ^1.0.6
+
+  # File handling
+  file_picker: ^6.1.1
+  excel: ^4.0.2
+
+  # Data visualization
+  fl_chart: ^0.67.0
+
+  # Data table
+  data_table_2: ^2.5.11
+
+  # State management
+  provider: ^6.1.1
+
+  # Date handling
+  intl: ^0.19.0
+
+  # Utility
+  collection: ^1.18.0
+
+  # PDF export
+  pdf: ^3.10.7
+  printing: ^5.12.0
+
+  # CSV export
+  csv: ^5.1.1
+
+  # Path handling
+  path: ^1.8.3
+
+  http: ^1.1.0
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+
+  # assets:
+  #   - assets/
+
+  # fonts:
+  #   - family: Roboto
+  #     fonts:
+  #       - asset: fonts/Roboto-Regular.ttf
+  #       - asset: fonts/Roboto-Bold.ttf
+  #         weight: 700

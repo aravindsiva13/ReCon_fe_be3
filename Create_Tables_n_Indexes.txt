@@ -1,0 +1,33 @@
+CREATE table reconciliation.PayTM_PhonePe (
+Txn_Source char(30), 
+Txn_Machine  char(10), 
+Txn_MID  char(80),
+Txn_Type char(40),  
+Txn_Date date, 
+Txn_RefNo char(60), 	
+Txn_Amount numeric
+);
+CREATE INDEX idx_txn_refno ON PayTM_PhonePe (Txn_RefNo);
+
+CREATE table reconciliation.payment_refund (
+Txn_Source char(30), 
+Txn_Machine  char(10), 
+Txn_MID  char(80), 
+Txn_Type char(40),  
+Txn_Date date, 
+Txn_RefNo char(60), 	
+Txn_Amount numeric
+);
+CREATE INDEX idx_txn_refno ON payment_refund (Txn_RefNo);
+
+CREATE table reconciliation.Recon_Outcome (
+Txn_RefNo CHAR(60), 
+Txn_Machine CHAR(10),
+Txn_MID CHAR(80),
+PTPP_Payment numeric,
+PTPP_Refund numeric,
+Cloud_Payment numeric,
+Cloud_Refund numeric,
+Cloud_MRefund numeric
+);
+CREATE INDEX idx_txn_refno ON Recon_Outcome (Txn_RefNo);
